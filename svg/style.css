@@ -1,0 +1,8 @@
+body{
+    background-color: white;
+}
+#string{
+    height:200px;
+    width:100%;
+    background-color: red;
+}
