@@ -1,0 +1,16 @@
+html,body{
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+
+}
+body{
+    background-color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size:10px;
+}
