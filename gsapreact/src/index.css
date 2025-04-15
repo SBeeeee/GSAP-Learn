@@ -16,11 +16,7 @@ padding:20px;
 display:flex;
 align-items:center;
 justify-content:space-evenly;
-}
-.box{
-  height:300px;
-  width:300px;
-  background-color:crimson;
+flex-direction: column;
 }
 .circle{
   height:300px;
@@ -28,7 +24,14 @@ justify-content:space-evenly;
   border-radius:50%;
   background-color:crimson;
 }
-.container{
-  padding:20px;
-  border:3px solid #fff;
+button{
+  padding:20px 100px;
+  border-radius:50px;
+  background-color: antiquewhite;
+  color:black;
+  font-size:20px;
+
+}
+button:active{
+  scale:0.9
 }
