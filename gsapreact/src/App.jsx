@@ -4,19 +4,19 @@ import gsap from 'gsap'
 
 const App = () => {
   
-  const [circle,setCircle]=useState(60)
-  const random=gsap.utils.random(-500,500,10)
-
-  useGSAP(()=>{
-    gsap.to(".circle",{
-      x:circle,
-      duration:0.5
+  const boxRef=useRef();
+  const {contextSafe}=useGSAP();
+  const rotatebox=contextSafe(function(){
+    gsap.to(boxRef.current,{
+      x:860,
+      duration:1
     })
-  },[circle])  //{scope:".container or boxRef" ,dependencies:[xValue,yValue]  //syntax to use both scope and dependencies scope defines the portion where the animation shld search for given classes or id to animate
+  })
+ 
   return (
     <main>
-    <button onClick={()=>{setCircle(random)}} >Animate</button>
-    <div className="circle"></div>
+    <button onClick={rotatebox} >Animate</button>
+    <div ref={boxRef} className="circle"></div>
     </main>
   )
 }
