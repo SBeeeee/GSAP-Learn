@@ -4,20 +4,24 @@ import gsap from 'gsap'
 
 const App = () => {
   
-const gsapref=useRef () 
-useGSAP(()=>{
-  gsap.to(gsapref.current,{
-    x:600,
-    duration:2,
-    delay:1,
-    rotate:720
+  const boxRef=useRef();
+  useGSAP(()=>{
+    gsap.from(boxRef.current,{
+      rotate:720,
+      duration:2,
+    })
   })
-})
   return (
     <main>
-      <div ref={gsapref} className="box">
-
-      </div>
+     <div className="container">
+   
+     <div className="circle"></div>
+     <div ref={boxRef} className="box"></div>
+     </div>
+     <div className="kuch">
+      <div className="circle"></div>
+      <div className="box"></div>
+     </div>
     </main>
   )
 }
